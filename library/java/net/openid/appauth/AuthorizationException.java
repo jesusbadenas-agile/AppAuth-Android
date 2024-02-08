@@ -136,6 +136,9 @@ public final class AuthorizationException extends Exception {
     static final String KEY_ERROR_DESCRIPTION = "errorDescription";
 
     @VisibleForTesting
+    static final String KEY_ERROR_RESPONSE_JSON = "errorResponseJson";
+
+    @VisibleForTesting
     static final String KEY_ERROR_URI = "errorUri";
 
     /**
@@ -671,6 +674,7 @@ public final class AuthorizationException extends Exception {
         JsonUtil.put(json, KEY_CODE, code);
         JsonUtil.putIfNotNull(json, KEY_ERROR, error);
         JsonUtil.putIfNotNull(json, KEY_ERROR_DESCRIPTION, errorDescription);
+        JsonUtil.putIfNotNull(json, KEY_ERROR_RESPONSE_JSON, responseJson);
         JsonUtil.putIfNotNull(json, KEY_ERROR_URI, errorUri);
         return json;
     }
