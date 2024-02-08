@@ -564,7 +564,7 @@ public final class AuthorizationException extends Exception {
                 JsonUtil.getStringIfDefined(json, KEY_ERROR),
                 JsonUtil.getStringIfDefined(json, KEY_ERROR_DESCRIPTION),
                 JsonUtil.getUriIfDefined(json, KEY_ERROR_URI),
-                json,
+                JsonUtil.getJsonObjectIfDefined(json, KEY_ERROR_RESPONSE_JSON),
                 null);
     }
 
